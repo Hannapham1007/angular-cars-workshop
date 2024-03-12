@@ -7,6 +7,7 @@
             <th>Model</th>
             <th>Description</th>
             <th>Link</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td>{{ car.model }}</td>
         <td>{{ car.description }}</td>
         <td><a routerLink="/cars/{{ car.id }}">View</a></td>
+        <td><a routerLink="/cars/edit/{{ car.id }}">Edit</a></td>
         </tr>
     </tbody>
 </table>

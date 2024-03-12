@@ -1,1 +1,24 @@
-<p>edit works!</p>
+<ng-container *ngIf="car === null">
+    <div><p><strong>Car not available!</strong></p></div>
+</ng-container>
+<ng-container *ngIf="car !== null">
+<div>
+    <h2>Update Car</h2>
+    <form [formGroup]="carForm" (ngSubmit)="updateCar()">
+    <div>
+        <label for="make">Make</label>
+        <input type="text" id="make" formControlName="make" />
+    </div>
+    <div>
+        <label for="model">Model</label>
+        <input type="text" id="model" formControlName="model" />
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input type="text" id="description" formControlName="description" />
+    </div>
+    <button type="submit" [disabled]="carForm.invalid">Update Car</button>
+    </form>
+</div>
+
+</ng-container>
